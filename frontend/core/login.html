@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    />
+    <title>Login and Registration form</title>
+    <link rel="stylesheet" href="../style/login.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            Log In
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            Register
+          </button>
+        </div>
+        <!-- <div class="social-icons">
+          <img src="C:\Users\Ramansaha\Desktop\Logo\f1.jpg" alt="Error" />
+          <img src="C:\Users\Ramansaha\Desktop\Logo\i1.jpg" alt="Error" />
+          <img src="C:\Users\Ramansaha\Desktop\Logo\t1.png" alt="Error" />
+        </div> -->
+        <form id="login" action="" class="input-group">
+          <input
+            type="text"
+            class="input-field"
+            id="login-email"
+            placeholder="Email-Id"
+            required
+          />
+          <input
+            type="password"
+            class="input-field"
+            id="login-password"
+            placeholder="Enter Pasword"
+            required
+          />
+
+          <button type="submit" class="submit-btn" id="login-submit">
+            Login
+          </button>
+          <p id="loginStatus"></p>
+        </form>
+
+        <form id="register" action="" class="input-group">
+          <!-- <input type="text" class="input-field" placeholder="Name" required /> -->
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Email-Id"
+            id="signup-email"
+            required
+          />
+          <input
+            type="password"
+            class="input-field"
+            id="signup-password"
+            placeholder="Enter Password"
+            required
+          />
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Confirm Pasword"
+            id="signup-conf-pass"
+            required
+          />
+          <input type="checkbox" class="check-box" /><span
+            >I agree to the terms and conditions</span
+          >
+          <button type="submit" class="submit-btn" id="signup-submit">
+            Register
+          </button>
+          <p id="signupStatus"></p>
+        </form>
+      </div>
+    </div>
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+
+      function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+      }
+    </script>
+    <script src="../scripts/login.js"></script>
+  </body>
+</html>

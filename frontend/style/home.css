@@ -1,0 +1,278 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Benne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+body {
+  background-color: #8e65c0;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* so that the #rightRotate can be visible in full screen (in x-axis) */
+}
+
+.userAvatar {
+  display: none;
+  height: 30px;
+  width: 30px;
+}
+
+.logoutNav {
+  display: none;
+  cursor: pointer;
+}
+
+#createResumeBtn:hover,
+#viewDemoBtn:hover {
+  transform: translateY(-5px);
+  transition: 0.5s all ease-in-out;
+}
+
+.bodyRight {
+  height: 80vh;
+  /* background-color: bisque; */
+}
+
+#canvas {
+  position: absolute;
+  right: 10px;
+  top: 20;
+  z-index: -1;
+}
+
+#homePageData {
+  margin-top: 100px;
+  height: 85vh;
+}
+
+#offcanvasRight {
+  background-color: #8e65c0;
+  opacity: 0.9;
+}
+
+#headIntro {
+  font-weight: 500;
+}
+
+#createResumeBtn,
+#viewDemoBtn {
+  margin-top: 20px;
+}
+
+#navigationBar {
+  height: 70px;
+}
+
+/* service window in right side on body */
+#service1 {
+  height: 170px;
+  width: 240px;
+  background-color: rgb(0, 0, 0, 0.7);
+  margin-left: 110px;
+  margin-top: 50px;
+}
+
+/* service window in right side on body */
+#service2 {
+  height: 170px;
+  width: 240px;
+  background-color: rgb(0, 0, 0, 0.7);
+  margin-left: 300px;
+  margin-top: 40px;
+}
+
+/* css for mac looking view in service1 and service2 starts here */
+.inner {
+  height: 20px;
+  background-color: #dddddd;
+}
+.threeDots div {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.threeDots div:nth-child(1) {
+  margin-left: 10px;
+  background-color: #ff5f57;
+}
+.threeDots div:nth-child(2) {
+  background-color: #ffbd2e;
+}
+.threeDots div:nth-child(3) {
+  background-color: #28ca41;
+}
+/* css for mac looking view in service1 and service2 ending here */
+
+.servicesIcon {
+  max-height: 130px;
+  max-width: 200px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+.servicesIcon:hover {
+  max-height: 127px;
+  max-width: 197px;
+}
+
+/* change properties of .serviceMsg class when user hover on .servicesIcon
+            serviceMsg must be a next element after serviceIcon , otherwise this css
+            will not work
+          */
+.servicesIcon:hover + .serviceMsg {
+  font-size: 17px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  transition: 0.2s all;
+}
+
+.serviceMsg {
+  font-size: 0px;
+  background-color: rgb(0, 0, 0);
+  color: azure;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* only visible for large screen */
+#rightRotate {
+  height: 100px;
+  width: 110%;
+  background-color: #8e65c0;
+  transform: rotate(8deg);
+}
+
+#serviceDetailsDiv {
+  /* height: 700px;  */
+  height: 800px;
+  max-width: 100%;
+  background-color: #fff;
+}
+
+/* Only visible for mobile screen */
+.serviceDesc {
+  display: none;
+  font-size: 16px;
+  text-align: left;
+  font-family: "Mulish", sans-serif;
+  /* font-family: 'Benne', serif;  */
+  /*Google font */
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.siteFeaturesHead {
+  color: #8e65c0;
+  font-family: "Mulish", sans-serif;
+}
+
+.siteFeaturesOuterHead {
+  /* color: #00a2ff; */
+  text-align: center;
+  margin-bottom: 50px;
+  /* display: none; */
+}
+
+#siteFeatures {
+  padding-top: 100px;
+}
+
+.siteFeaturesDesc {
+  /* font-family: 'Roboto Slab', serif; */
+  font-family: "Mulish", sans-serif;
+}
+
+.siteFeatuesImg {
+  max-height: 200px;
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+#siteFeatureDivider {
+  height: 5px;
+  width: 70%;
+  border-top: 5px solid #8e65c0;
+  margin-left: auto;
+  margin-right: auto;
+  /* animation: changeLineWidth infinite 8s linear; */
+}
+
+/* ---------------------------------------Mobile view CSS ----------------- */
+/* mobile & tab screen */
+@media only screen and (max-width: 768px) {
+  #homePageData {
+    margin-top: 50px;
+    height: 430px;
+    /*DO NOT GIVE height IN vh here (coz there are many types of mobile devices with different height and width) */
+  }
+
+  #createResumeBtn {
+    margin-top: 30px;
+  }
+
+  /* removing rightRotate for sm screen as it is going 
+               beyond device width and overflow-x css property is
+               being ignored by mobile browser  */
+  #rightRotate {
+    display: none;
+  }
+
+  #service1 {
+    height: 180px;
+    width: 85%;
+    background-color: rgb(0, 0, 0, 0.7);
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 15px;
+  }
+
+  #service2 {
+    height: 180px;
+    width: 85%;
+    background-color: rgb(0, 0, 0, 0.7);
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  .serviceMsg {
+    font-size: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: rgb(0, 0, 0, 0.7);
+    color: azure;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  #serviceDetailsDiv {
+    /* border-top-left-radius: 20%; */
+    border-top-right-radius: 15%;
+    height: 2000px;
+  }
+
+  .serviceDesc {
+    display: block;
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
+  }
+
+  #siteFeatures {
+    padding-top: 700px;
+    font-size: 18px;
+  }
+
+  /* .siteFeaturesOuterHead{
+                display: block;
+            } */
+
+  .siteFeatuesImg {
+    max-height: 120px;
+    max-width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

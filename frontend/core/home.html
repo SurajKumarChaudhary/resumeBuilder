@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner - studednt portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+    <!-- custom styling  -->
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/footer.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navigationBar">
+        <div class="container-fluid">
+            <p class="display-6 text-white ">Beginner</p>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- Offcanvas section -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <!-- <h5 id="offcanvasRightLabel"> </h5> -->
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <!-- offCanvas for mobile screen -->
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav navigation navigationItems">
+                        <li class="nav-item">
+                            <a class="nav-link  active" aria-current="page" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./templates.html">Resume Builder</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link " href="#">Discussion</a>
+                        </li> -->
+                        <li class="nav-item">
+                           <!-- <span> <img src="../assets/img/user-avatar.png" class="userAvatar"/> </span>  -->
+                            <a class="nav-link loginNav" href="./login.html">Login/Signup</a>
+                        </li>
+
+                        <li class="nav-item">
+                             <a class="nav-link logoutNav">Logout</a>
+                         </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!--  -->
+
+            <div class="collapse navbar-collapse justify-content-end offcanvas-body" id="navbarBav">
+                <ul class="navbar-nav navigation">
+                    <li class="nav-item">
+                        <a class="nav-link  active" aria-current="page" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./templates.html">Resume Builder</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link " href="#">Discussion</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <!-- <span> <img src="../assets/img/user-avatar.png" class="userAvatar"/> </span> -->
+                        <a class="nav-link loginNav" href="./login.html">Login/Signup</a>           
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link logoutNav">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="homePageData">
+        <div class="row">
+            <div class="col-sm">
+                <h1 class="text-white mt-5 display-3" id="headIntro">Get professional looking resume to land into your
+                    dream job</h1>
+                <!-- create-resume & view-demo  buttons -->
+                <div class="row">
+                    <!-- keep 6/6 col for medium of above medium screen-->
+                    <!-- but it will take 12/12 col for mobile screen-->
+                    <div class="col-sm-6">
+                        <!-- <button class="btn btn-info btn-lg w-100 text-white" id="createResumeBtn">Create Resume</button> -->
+                        <a href="./templates.html" class="btn btn-info btn-lg w-100 text-white" id="createResumeBtn">Create Resume</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <button class="btn btn-outline-warning btn-lg w-100 text-white" id="viewDemoBtn">View
+                            Demo</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canvas Area  -->
+            <div class="col-sm bodyRight" id="CanvasSection">
+                <canvas id="canvas"></canvas>
+
+                <div id="service1">
+                    <!-- mac looking view in service window -->
+                    <div class="inner">
+                        <section class="threeDots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </section>
+                    </div>
+                    <!-- mac view ending -->
+                    <!-- DO NOT CHANGE ORDER OF BELOW ELEMENT (i.e. <img> and ,<p>) - refer to the .serviceIcon:hover class CSS for details  -->
+                    <img src="../assets/img/meeting.png" alt="..." class="servicesIcon">
+                    <p class="serviceMsg"> Go to discussion</p>
+                </div>
+
+                <div class="container">
+                    <p id="service1Desc" class="serviceDesc">Post your question,doubt,ideas etc in the discussion portal
+                        and get a quick response from your faculties,seniors or friends.</p>
+                </div>
+
+                <div id="service2">
+                    <!-- mac looking view in service window -->
+                    <div class="inner">
+                        <section class="threeDots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </section>
+                    </div>
+                    <!-- mac view ending -->
+                    <!-- DO NOT CHANGE ORDER OF BELOW ELEMENT(i.e. <img> and ,<p>) - refer to the .serviceIcon:hover class CSS for details  -->
+                    <img src="../assets/img/cv.png" alt="..." class="servicesIcon">
+                    <p class="serviceMsg"> View Templates</p>
+                </div>
+
+                <div class="container">
+                    <p id="service2Desc" class="serviceDesc">Create resume with amazing fancy looking predefined
+                        templates</p>
+                </div>
+
+            </div>
+        </div> <!-- main row closing -->
+    </div> <!-- container  closing -->
+
+
+    <div id="rightRotate"></div> <!-- div for showing a small fold in bottom div -->
+
+    <div id="serviceDetailsDiv">
+        <div id="siteFeatures">
+
+            <h3 class="siteFeaturesOuterHead"> What makes us unique? </h3>
+            <!-- continue without login mesage and image -->
+            <div class="row container" id="siteFeature1">
+                <div class="col-sm-4">
+                    <img src="../assets/img/password.png" alt="..." class="siteFeatuesImg">
+                </div>
+                <div class="col-sm-8">
+                    <h3 class="siteFeaturesHead">Continue without login</h3>
+                    <p class="siteFeaturesDesc"> We know you don't want to create accounts unnecessarily and we respect
+                        your privacy. That's why we are not forcing you to create an account in order to use our
+                        service. <b> But creating an account will surely help you in future to easily make changes in
+                            your resume.</b> You can login into your account and easily add or delete details wherever
+                        required.This can save  a lot of your precious time. </p>
+                </div>
+            </div>
+
+            <br><br>
+            <hr id="siteFeatureDivider">
+            <br><br>
+
+            <div class="row container" id="siteFeature2">
+                <div class="col-sm-4">
+                    <img src="../assets/img/hacker.png" alt="..." class="siteFeatuesImg">
+                </div>
+
+                <div class="col-sm-8">
+                    <h4 class="siteFeaturesHead">Anonymous communication</h4>
+                    <p class="siteFeaturesDesc">Most of the time people don’t communicate because they are not confident
+                        with their question or answer. That's why we have a unique feature called Anonymous
+                        communication. While asking a question , you can select the Anonymous option. <b>By enabling
+                            this you can hide your identity.</b> But this feature can be misused by users for
+                        inappropriate / offensive messaging. To avoid that an <b>admin would be always in control who
+                            can see details if required.</b> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footerBlock">
+    <footer>
+        <div class="row">
+            <div class="col">
+                <h4>Reach us</h3>
+                    <a href="#">About</a> <br>
+                    <a href="#">Report a bug</a> <br>
+                    <a href="#">Rate us</a>
+                    <p> <b> Email : </b> <span>suraj3d3@gmail.com</span></p>
+                    <div id="social">
+                        <a href="#"> <i class="fab fa-facebook fa-2x" id="fb"></i> </a>
+                        <i class="fab fa-twitter fa-2x" id="twitter"></i>
+                        <i class="fab fa-github fa-2x" id="github"></i>
+                    </div>
+            </div>
+
+            <div class="col">
+                <h4>Attributes</h4>
+                <a href="#"> Resources </a> <br>
+                <a href="#"> FAQs </a> <br>
+            </div>
+        </div> <!-- footer elements ended -->
+
+        <hr>
+        <div id="footerEnd">
+            <div class="row">
+                <div class="col">
+                    <p> Feel free to copy </p>
+                </div>
+                <div class="col">
+                    <p> <a href="#">Terms & Conditions </a> | <a href="#">Privacy Policy </a> | &nbsp;&nbsp; <a href="#"
+                            id="backToTop"> <i class="fas fa-chevron-up fa-2x"></i> </a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

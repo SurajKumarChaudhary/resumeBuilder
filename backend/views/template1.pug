@@ -1,0 +1,189 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js')
+    
+    
+  
+
+    title Document
+
+    style.
+      #getPdfBtn
+      {
+      height :30px;
+      width:200px;
+      text-align:center;
+      background-color: #8e65c0;
+      border : none;
+      border-radius: 10px;
+      margin:10px 20px;
+      color: #fff;
+      }
+      #font-style-head
+      {
+      font-family: 'Times New Roman', Times, serif;
+      }
+      #font-style
+      {
+      font-family:Calibri (Body);
+      }
+      #div-row-head
+      {
+      background-color: lightgray;
+      }
+      #div-col-head
+      {
+      margin-left: 30px;
+      }
+      #body
+      {
+      background-color: rgb(227, 233, 238);
+      }
+      #hr-line-1
+      {
+      width: 100%; height: 1px;
+      background-color: rgb(13, 13, 14);
+      margin-top: -10px;
+      margin-left: -10px;
+      }
+      #hr-line-2
+      {
+      width: 100%; height: 1px;
+      background-color: rgb(13, 13, 14);
+      margin-top: -10px;
+      }
+      #resumeContent
+      {
+      margin:0;
+      padding:0;
+      }
+      table, th, td 
+      {
+      border:1px solid black;
+      padding:8px;
+      }
+      td
+      {
+      font-size: 14px;
+      
+      }
+  
+  body 
+    button#getPdfBtn  Download resume
+    br
+    br
+
+    #resumeContent.container
+      .container
+        .row.justify-content-md-center
+          #div-row-head.col-md-9
+            h1#font-style-head(style='margin-left: 30px;')= basic.firstName + ' ' + basic.lastName
+            h5#font-style(style='margin-left: 30px; margin-top: 30px;')= basic.profession
+            h5#font-style(style='margin-left: 30px;')!= '<b> DOB : </b>' + personal.dob
+      .container
+        .row.justify-content-md-center
+          #body.col-12.col-md-9
+            p
+              //b= objective
+        .row.justify-content-md-center
+          #body.col-8.col-md-6
+            //- h5(style='margin-left: 5px;') CAREER OBJECTIVE
+            //- hr#hr-line-1
+            //- p= objective
+            //- br
+            h5(style='margin-left: 5px;') CERTIFICATION
+            hr#hr-line-1
+            ul(style='list-style-type: disc;')
+              each val in certification
+                //- using != for using <br> as a html tag , not as a text
+                li!= '<strong>' + val.certName + '</strong>' + '<br/>' + val.certDescription + '<br/>'+ '<i> Certification by - '+ val.certOrganisation + '(' + val.validTill + ')' + '</i>'
+                br
+          #body.col-4.col-md-3
+            h5
+              i.bi.bi-person-fill Contact
+            hr#hr-line-2
+            br
+            p
+              b Address
+              br
+              span=                         basic.city + ',' + basic.state + ' ' + basic.zipCode
+              br
+              br
+              b Phone
+              br
+              span=                         basic.phoneNumber
+              br
+              br
+              b Email
+              br
+              span=                         basic.email
+        .row.justify-content-md-center
+          #body.col-8.col-md-6
+            h5(style='margin-left: 5px;') WORK HISTORY
+            hr#hr-line-1
+
+            ul(style='list-style-type: disc;')
+              each val in experience
+                li!= '<strong>'+ val.organisation + '</strong>' + '<i> ( ' + val.startDate +' to ' + val.endDate + ') </i>' + '<br/> <i> Designation : </i>' + val.jobProfile + '<br/>' + val.jobDescription + '<br/><br/> <strong> Skills : </strong>' + val.skills
+                br
+                br
+            
+          #body.col-4.col-md-3
+            h5(style='margin-left: 5px;') Skills
+            hr#hr-line-1
+            p= personal.hobby1
+            p= personal.hobby2
+
+        .row.justify-content-md-center
+          #body.col-8.col-md-6
+            h5 EDUCATION
+            hr#hr-line-1
+            table 
+              tr 
+                th Degree 
+                th Board/University 
+                th Duration
+                th Percentage
+
+              each val in education
+                tr
+                  td= val.degree
+                  td= val.university
+                  td= val.startYear + ' - ' + val.endYear
+                  td= val.percentage
+
+            br
+          #body.col-4.col-md-3
+            // only render if hobbies are passed by user
+            if personal.hobby1
+              h5 HOBBIES
+              hr#hr-line-1
+              p= personal.hobby1
+              if personal.hobby2 
+                p= personal.hobby2
+
+        .row.justify-content-md-center
+          #body.col-12.col-md-9   
+            // only render if achievements are passed by user
+            if achievement
+              hr#hr-line-1
+              h5 ACHIVEMENTS
+              p= achievement
+    
+
+script(src='generatePDF.js')
+
+
+ 
+ 
+

@@ -1,0 +1,29 @@
+
+        nav{
+            background-color: #8e65c0;
+        }
+
+        /* nav-item is a bootstrap class - USE WITH CAUTION */
+        /* adding hover effect for navigation */
+        .nav-item a:hover{
+            color: aqua !important;
+            transition:0.5s all; 
+        }  
+
+        .navigation a{
+            font-size: 19px;
+            font-weight: 800;
+            color: azure !important;
+        }
+
+        .navigationOnScroll a{
+            font-size: 19px;
+            font-weight: 800;
+            color: rgb(0, 0, 0) !important;
+        }
+
+        /* background color of menu bar for mobile screen */
+        .offcanvas{
+            background-color: #8e65c0;
+            opacity: 0.9;
+        }

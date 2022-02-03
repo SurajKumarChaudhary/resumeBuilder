@@ -1,0 +1,61 @@
+/* google font - mulish */
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+
+#templatesHeading{
+    text-align: center;
+    margin-top: 110px;
+    font-weight: 500;
+    font-family: 'Mulish', sans-serif;
+}
+
+#templatesIntro{
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+}
+
+
+/* container containing all templates demo */
+#templatesContainer{
+    min-height: 700px ;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    /* border: 2px solid green; */
+}
+
+
+/* single template under  templatesContainer */
+.templateItem{
+    height:300px;
+    /* transition: transform .2s;  */
+    /* background-color: rgb(35, 190, 105); */
+}
+
+.templateItemImg{
+    height:100%;
+    width:100%;
+    box-shadow: 5px 5px 10px #a1a1a1;
+    transition: transform 0.2s; 
+
+}
+
+.templateItemImg:hover{
+    transform: scale(1.8); 
+    cursor: pointer;
+}
+
+
+
+/* ---------------------------------------Mobile view CSS ----------------- */
+        /* mobile & tab screen */
+@media only screen and (max-width: 768px) {
+    .templateItem{
+        margin-bottom: 30px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .templateItemImg:hover{
+        transform:none;
+    }
+}

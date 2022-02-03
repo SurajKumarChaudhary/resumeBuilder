@@ -1,0 +1,15 @@
+#dependencies
+backend\node_modules
+node_modules
+
+#testing
+/test
+
+#envs
+.env
+
+#learning by doing
+/other
+
+#development
+/.vscode
