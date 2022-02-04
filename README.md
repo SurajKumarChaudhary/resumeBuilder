@@ -10,7 +10,7 @@ We have created a web based online resume builder where users can fill their det
 
 ----
 ### This website can be accessed using the below given URL : 
-[http://surajchy.tech/resumeBuilder/frontend/core/home.html](http://surajchy.tech/resumeBuilder/frontend/core/home.html)
+[https://www.surajchy.tech/resumeBuilder/frontend/core/home.html](https://www.surajchy.tech/resumeBuilder/frontend/core/home.html)
 
 <br/> <br/>
 
